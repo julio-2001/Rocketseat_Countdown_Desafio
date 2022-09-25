@@ -1,0 +1,31 @@
+
+
+// Mixin para tipografia do site
+@mixin tipografia($size, $color,$weight){
+    font-family: 'Poppins', sans-serif;
+
+    @if $size == 14{
+
+       color: $color;
+       font-size: .8em;
+       font-weight: $weight; 
+    }
+
+    @else if $size == 16{
+        color: $color;
+        font-size: 1em;
+        font-weight: $weight;
+    }
+
+    @else if $size == 36{
+        color: $color;
+        font-size: 2.25em;
+        font-weight: $weight;
+    }
+
+    @else if $size == 72{
+        color: $color;
+        font-size:4,5em;
+        font-weight: $weight;
+    }
+}
