@@ -8,5 +8,141 @@ $Labelhorario:#C8C8C8;
 $numeros:#4D4C59;
 $subTitulo:#9C9AB6;
 $botao:#ffffff;
+$nuvem:#DDDBF2;
 
 
+body{
+    width: 100%;
+    height:100vh;
+    overflow: hidden;
+  
+}
+
+
+
+.timer{
+    display: flex;
+    height: 100%;
+    justify-content: space-between;
+    flex-direction: column;
+    
+
+    .timer_clock{
+        
+        width: 30%;
+        min-width: 400px;
+        padding: 30px 0 30px 0;
+        height: 350px;
+        margin: auto 0;
+        z-index: 9999;
+
+        #titulo{
+
+            text-align: center;
+            line-height: 54px;
+            z-index: 99999;
+            @include tipografia(36,$titulo,500 );
+        }
+
+        .timer_clock_labels{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+
+            li{
+                list-style: none;
+                @include tipografia(14,$Labelhorario,300 )
+            }
+        }
+
+
+        .timer_clock_numbers{
+            display: flex;
+            flex-direction:row;
+            justify-content: space-around;
+
+            li{
+                list-style: none;
+                @include tipografia(72, $numeros,400)
+            }
+        }
+
+        #subTitulo{
+
+            text-align: center;
+            line-height: 21px;
+            margin-bottom: 32px;
+            @include tipografia(14, $subTitulo,400)
+        }
+
+        #botao{
+            background: #6C63FF;
+            padding: 16px 32px 16px 32px;
+            border: none;
+            border-radius: 10px;
+            display: flex;
+            margin: 0 auto;
+            cursor:pointer;
+            @include tipografia(16,$botao,400 );
+            
+        }
+    }
+}
+
+.container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin: 0;
+}
+
+
+#nuvem-center{
+   
+    top: 0;
+    bottom: 0;
+    right: 0;
+    margin: 25px 0 0 0;
+    display: flex;
+   justify-content: center;
+   align-items: center;
+   width: 350px;
+   animation:animateNuvemCenter .6s infinite ease-in-out alternate ;
+
+}
+
+@keyframes animateNuvemCenter{
+    to{
+        transform: translateY(-5px);
+    }
+}
+
+#nuven-top{
+    display: flex;
+    justify-content: stretch;
+    background: rgba(255, 166, 0, 0.264);
+
+}
+#nuvem-bottom{
+ 
+    display: flex;
+    align-self: stretch;
+    background: rgba(255, 166, 0, 0.264);
+    max-height: 250px;
+}
+
+#rocket{
+    position: absolute;
+    animation: animationRocket 5s forwards;
+}
+
+@keyframes animationRocket {
+    from{
+        transform: translate(0px, 2550px);
+    }
+
+    to{
+        transform: translate(45px , -250px);
+    }
+    
+}

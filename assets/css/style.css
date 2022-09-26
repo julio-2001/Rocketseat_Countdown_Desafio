@@ -2,4 +2,148 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.timer {
+  display: flex;
+  height: 100%;
+  justify-content: space-between;
+  flex-direction: column;
+}
+.timer .timer_clock {
+  width: 30%;
+  min-width: 400px;
+  padding: 30px 0 30px 0;
+  height: 350px;
+  margin: auto 0;
+  z-index: 9999;
+}
+.timer .timer_clock #titulo {
+  text-align: center;
+  line-height: 54px;
+  z-index: 99999;
+  font-family: "Poppins", sans-serif;
+  color: #6C63FF;
+  font-size: 2.25em;
+  font-weight: 500;
+}
+.timer .timer_clock .timer_clock_labels {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.timer .timer_clock .timer_clock_labels li {
+  list-style: none;
+  font-family: "Poppins", sans-serif;
+  color: #C8C8C8;
+  font-size: 0.8em;
+  font-weight: 300;
+}
+.timer .timer_clock .timer_clock_numbers {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.timer .timer_clock .timer_clock_numbers li {
+  list-style: none;
+  font-family: "Poppins", sans-serif;
+  color: #4D4C59;
+  font-size: 4.5em;
+  font-weight: 400;
+}
+.timer .timer_clock #subTitulo {
+  text-align: center;
+  line-height: 21px;
+  margin-bottom: 32px;
+  font-family: "Poppins", sans-serif;
+  color: #9C9AB6;
+  font-size: 0.8em;
+  font-weight: 400;
+}
+.timer .timer_clock #botao {
+  background: #6C63FF;
+  padding: 16px 32px 16px 32px;
+  border: none;
+  border-radius: 10px;
+  display: flex;
+  margin: 0 auto;
+  cursor: pointer;
+  font-family: "Poppins", sans-serif;
+  color: #ffffff;
+  font-size: 1em;
+  font-weight: 400;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin: 0;
+}
+
+#nuvem-center {
+  top: 0;
+  bottom: 0;
+  right: 0;
+  margin: 25px 0 0 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 350px;
+  -webkit-animation: animateNuvemCenter 0.6s infinite ease-in-out alternate;
+          animation: animateNuvemCenter 0.6s infinite ease-in-out alternate;
+}
+
+@-webkit-keyframes animateNuvemCenter {
+  to {
+    transform: translateY(-5px);
+  }
+}
+
+@keyframes animateNuvemCenter {
+  to {
+    transform: translateY(-5px);
+  }
+}
+#nuven-top {
+  display: flex;
+  justify-content: stretch;
+  background: rgba(255, 166, 0, 0.264);
+}
+
+#nuvem-bottom {
+  display: flex;
+  align-self: stretch;
+  background: rgba(255, 166, 0, 0.264);
+  max-height: 250px;
+}
+
+#rocket {
+  position: absolute;
+  -webkit-animation: animationRocket 5s forwards;
+          animation: animationRocket 5s forwards;
+}
+
+@-webkit-keyframes animationRocket {
+  from {
+    transform: translate(0px, 2550px);
+  }
+  to {
+    transform: translate(45px, -250px);
+  }
+}
+
+@keyframes animationRocket {
+  from {
+    transform: translate(0px, 2550px);
+  }
+  to {
+    transform: translate(45px, -250px);
+  }
 }/*# sourceMappingURL=style.css.map */
